@@ -1,12 +1,11 @@
-﻿@model IEnumerable<InformationVM>
+﻿@model IEnumerable<AboutVM>
 @{
     ViewData["Title"] = "Index";
 }
 
-}
 <main id="main" class="main">
     <div class="container mt-5">
-        <h2 class="text-center">Information</h2>
+        <h2 class="text-center">About</h2>
         <div class="create-operations ">
             <a asp-action="Create" class="btn btn-success text-white  mt-2"><i class="fa-solid fa-plus"></i></a>
         </div>
@@ -28,14 +27,14 @@
 
                         <td>
                             <textarea id="w3review" name="w3review" rows="4" cols="50" readonly style="resize:none;">
-@item.Title
-        </textarea>
+ @item.Title
+            </textarea>
 
                         </td>
                         <td>
                             <textarea id="w3review" name="w3review" rows="4" cols="50" readonly style="resize:none;">
-@item.Description
-        </textarea>
+ @item.Description
+            </textarea>
                         </td>
                         <td>@item.CreatedDate</td>
                         <td>
@@ -58,4 +57,6 @@
 
     </div>
 </main>
+
+
 

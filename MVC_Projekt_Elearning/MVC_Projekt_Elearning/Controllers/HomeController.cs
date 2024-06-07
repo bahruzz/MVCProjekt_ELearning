@@ -9,12 +9,13 @@ namespace MVC_Projekt_Elearning.Controllers
     {
         private readonly ISliderService _sliderService;
         private readonly IInformationService _informationService;
+        private readonly IAboutService _aboutService;
 
-        public HomeController(ISliderService sliderservice,IInformationService information)
+        public HomeController(ISliderService sliderservice,IInformationService informationService, IAboutService aboutService)
         {
             _sliderService = sliderservice;
-            _informationService = information;
-
+            _informationService = informationService;
+            _aboutService = aboutService;
         }
 
 
@@ -22,8 +23,9 @@ namespace MVC_Projekt_Elearning.Controllers
         {
             HomeVM model = new()
             {
-                Sliders = await _sliderService.GetAllAsync(),
-                 Informations = await _informationService.GetAllAsync()
+                 Sliders = await _sliderService.GetAllAsync(),
+                 Informations = await _informationService.GetAllAsync(),
+                Abouts = await _aboutService.GetAboutAsync(),
 
             };
             return View(model);

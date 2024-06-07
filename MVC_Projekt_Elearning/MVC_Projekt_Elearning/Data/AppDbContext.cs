@@ -10,6 +10,7 @@ namespace MVC_Projekt_Elearning.Data
 
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Information> Informations { get; set; }
+        public DbSet<About> Abouts { get; set; }
 
 
 
@@ -18,6 +19,7 @@ namespace MVC_Projekt_Elearning.Data
         {
             modelBuilder.Entity<Slider>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Information>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<About>().HasQueryFilter(m => !m.SoftDeleted);
         }
 
 
