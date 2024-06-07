@@ -2713,8 +2713,36 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\8a97cef2-48ae-4404-b128-164597a740d2-0489d5d0-355a-48d6-b334-dba9324f4072-course-3.jpg",
-      "PackagePath": "staticwebassets\\img\\8a97cef2-48ae-4404-b128-164597a740d2-0489d5d0-355a-48d6-b334-dba9324f4072-course-3.jpg"
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\490edcc3-a9c9-4150-9886-2d7c0b4abe87-carousel-1.jpg",
+      "PackagePath": "staticwebassets\\img\\490edcc3-a9c9-4150-9886-2d7c0b4abe87-carousel-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\52019194-355c-4a1a-af62-b71805d58148-1.jpg",
+      "PackagePath": "staticwebassets\\img\\52019194-355c-4a1a-af62-b71805d58148-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\90c3a003-ed27-4794-8a57-234d3771c439-carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\90c3a003-ed27-4794-8a57-234d3771c439-carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\90e5f76b-ca9d-48af-99c4-0710afd93843-3.jpg",
+      "PackagePath": "staticwebassets\\img\\90e5f76b-ca9d-48af-99c4-0710afd93843-3.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\about.jpg",
@@ -2755,6 +2783,18 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\course-3.jpg",
       "PackagePath": "staticwebassets\\img\\course-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\f4094a30-9305-4d06-9491-86012d880e2c-4.jpg",
+      "PackagePath": "staticwebassets\\img\\f4094a30-9305-4d06-9491-86012d880e2c-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\fcf5cbdb-34c9-4d07-a44f-762bb96a0952-2.jpg",
+      "PackagePath": "staticwebassets\\img\\fcf5cbdb-34c9-4d07-a44f-762bb96a0952-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\graduate_0.jpg",
+      "PackagePath": "staticwebassets\\img\\graduate_0.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\img\\team-1.jpg",

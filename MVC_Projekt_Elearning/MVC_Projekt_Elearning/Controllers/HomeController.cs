@@ -1,21 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using MVC_Projekt_Elearning.Services.Interfaces;
+using MVC_Projekt_Elearning.ViewModels;
 using System.Diagnostics;
 
 namespace MVC_Projekt_Elearning.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ISliderService _sliderService;
+        private readonly IInformationService _informationService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ISliderService sliderservice,IInformationService information)
         {
-            _logger = logger;
+            _sliderService = sliderservice;
+            _informationService = information;
+
         }
 
-        public IActionResult Index()
+
+        public async Task<IActionResult> Index()
         {
-            return View();
+            HomeVM model = new()
+            {
+                Sliders = await _sliderService.GetAllAsync(),
+                 Informations = await _informationService.GetAllAsync()
+
+            };
+            return View(model);
         }
 
     }

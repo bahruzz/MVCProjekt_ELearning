@@ -9,6 +9,7 @@ namespace MVC_Projekt_Elearning.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Information> Informations { get; set; }
 
 
 
@@ -16,6 +17,7 @@ namespace MVC_Projekt_Elearning.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Slider>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Information>().HasQueryFilter(m => !m.SoftDeleted);
         }
 
 

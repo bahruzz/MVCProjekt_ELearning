@@ -11,5 +11,7 @@ namespace MVC_Projekt_Elearning.Services.Interfaces
         Task CreateAsync(Slider slider);
         Task<Slider> GetByIdAsync(int id);
         Task DeleteAsync(Slider slider);
+        Task EditAsync();
+        Task<bool> ExistByIdAsync(int id, string title);
     }
 }

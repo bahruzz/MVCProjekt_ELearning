@@ -7,7 +7,7 @@ namespace MVC_Projekt_Elearning.ViewModels.Sliders
 
         public string Description { get; set; }
         [Required(ErrorMessage = "This input can't be empty")]
-        [StringLength(20)]
+        [StringLength(200)]
         public string Title { get; set; }
 
         public IFormFile Image { get; set; }

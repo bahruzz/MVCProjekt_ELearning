@@ -4,6 +4,7 @@ using MVC_Projekt_Elearning.Models;
 using MVC_Projekt_Elearning.Services.Interfaces;
 using MVC_Projekt_Elearning.ViewModels.Sliders;
 using System.Reflection.Metadata;
+using System.Xml.Linq;
 
 namespace MVC_Projekt_Elearning.Services
 {
@@ -29,9 +30,19 @@ namespace MVC_Projekt_Elearning.Services
             await _context.SaveChangesAsync();
         }
 
+        public async Task EditAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<bool> ExistAsync(string title)
         {
             return await _context.Sliders.AnyAsync(m => m.Title.Trim() == title.Trim());
+        }
+
+        public async  Task<bool> ExistByIdAsync(int id, string title)
+        {
+            return await _context.Sliders.AnyAsync(m => m.Title.Trim() == title.Trim() && m.Id != id);
         }
 
         public async Task<IEnumerable<SliderVM>> GetAllAsync(int? take = null)
