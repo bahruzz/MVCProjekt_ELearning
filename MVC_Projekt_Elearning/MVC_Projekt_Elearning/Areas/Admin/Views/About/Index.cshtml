@@ -40,9 +40,14 @@
                         <td>
                             <a class="btn btn-primary text-white btn-sm" asp-action="Detail" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a>
                             <a class="btn btn-warning text-white btn-sm" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen"></i></a>
-                            <form class="d-inline" method="post" asp-action="Delete" asp-route-id="@item.Id">
-                                <button type="submit" class="btn btn-danger text-white btn-sm"><i class="fa-solid fa-trash"></i></button>
-                            </form>
+                            @if (Model.Count() == 1) { }
+                            else
+                            {
+                                <form class="d-inline" method="post" asp-action="Delete" asp-route-id="@item.Id">
+                                    <button type="submit" class="btn btn-danger text-white btn-sm"><i class="fa-solid fa-trash"></i></button>
+                                </form>
+                            }
+                           
                         </td>
 
                     </tr>
