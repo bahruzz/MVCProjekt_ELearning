@@ -16,7 +16,6 @@
 
                     <th scope="col" style="background-color:white;color:black">Title</th>
                     <th scope="col" style="background-color:white;color:black">Description</th>
-                    <th scope="col" style="background-color:white;color:black">Created date</th>
                     <th scope="col" style="background-color:white;color:black">Operations</th>
 
                 </tr>
@@ -36,8 +35,7 @@
                             <textarea id="w3review" name="w3review" rows="4" cols="50" readonly style="resize:none;">
 @item.Description
         </textarea>
-                        </td>
-                        <td>@item.CreatedDate</td>
+                        </td>                        
                         <td>
                             <a class="btn btn-primary text-white btn-sm" asp-action="Detail" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a>
                             <a class="btn btn-warning text-white btn-sm" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen"></i></a>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H2mrRP+FTkh5lmLGX4yzBuZXRvTM3fgwRQlIzV4b52M=",
+  "Hash": "HgzyM0JQZZQy/KavUzF5B7xtlpaFteuztKrP3Z5TV44=",
   "Source": "MVC_Projekt_Elearning",
   "BasePath": "_content/MVC_Projekt_Elearning",
   "Mode": "Default",
@@ -3456,6 +3456,25 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\apple-touch-icon.png"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\bahruz.jpeg",
+      "SourceId": "MVC_Projekt_Elearning",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\",
+      "BasePath": "_content/MVC_Projekt_Elearning",
+      "RelativePath": "admin/assets/img/bahruz.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\bahruz.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\card.jpg",
       "SourceId": "MVC_Projekt_Elearning",
       "SourceType": "Discovered",
@@ -3777,25 +3796,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\product-5.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\profile-img.jpg",
-      "SourceId": "MVC_Projekt_Elearning",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\",
-      "BasePath": "_content/MVC_Projekt_Elearning",
-      "RelativePath": "admin/assets/img/profile-img.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\profile-img.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\slides-1.jpg",

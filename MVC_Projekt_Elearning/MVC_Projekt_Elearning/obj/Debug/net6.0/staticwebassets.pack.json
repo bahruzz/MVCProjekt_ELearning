@@ -721,6 +721,10 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\apple-touch-icon.png"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\bahruz.jpeg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\bahruz.jpeg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\card.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\card.jpg"
     },
@@ -787,10 +791,6 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\product-5.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\product-5.jpg"
-    },
-    {
-      "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\profile-img.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\profile-img.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\ELeraningMVCProjekt\\MVC_Projekt_Elearning\\MVC_Projekt_Elearning\\wwwroot\\admin\\assets\\img\\slides-1.jpg",
