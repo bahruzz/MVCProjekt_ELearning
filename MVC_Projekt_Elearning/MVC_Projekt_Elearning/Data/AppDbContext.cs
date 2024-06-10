@@ -30,6 +30,8 @@ namespace MVC_Projekt_Elearning.Data
             modelBuilder.Entity<About>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Course>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Student>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Instructor>().HasQueryFilter(m => !m.SoftDeleted);
         }
 
 
