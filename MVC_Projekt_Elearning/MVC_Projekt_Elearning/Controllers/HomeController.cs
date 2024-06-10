@@ -14,13 +14,15 @@ namespace MVC_Projekt_Elearning.Controllers
         private readonly ICategoryService _categoryService;
         private readonly ICourseService _courseService;
         private readonly IInstructorService _instructorService;
+        private readonly IStudentService _studentService;
 
         public HomeController(ISliderService sliderservice,
             IInformationService informationService, 
             IAboutService aboutService,
             ICategoryService categoryService,
             ICourseService courseService,
-            IInstructorService instructorService)
+            IInstructorService instructorService,
+            IStudentService studentService)
         {
             _sliderService = sliderservice;
             _informationService = informationService;
@@ -28,6 +30,7 @@ namespace MVC_Projekt_Elearning.Controllers
             _categoryService = categoryService;
             _courseService = courseService;
             _instructorService = instructorService;
+            _studentService = studentService;
         }
 
 
@@ -45,6 +48,7 @@ namespace MVC_Projekt_Elearning.Controllers
                 Categories = a.Skip(1).Take(2),
                 Courses = await _courseService.GetAllAsync(),
                 Instructors = await _instructorService.GetAllAsync(),
+                Students = await _studentService.GetAllAsync(),
 
             };
             return View(model);

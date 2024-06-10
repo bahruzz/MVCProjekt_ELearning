@@ -253,7 +253,6 @@ namespace MVC_Projekt_Elearning.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("SocialLink")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -263,6 +262,33 @@ namespace MVC_Projekt_Elearning.Migrations
                     b.HasIndex("SocialId");
 
                     b.ToTable("InstructorSocials");
+                });
+
+            modelBuilder.Entity("MVC_Projekt_Elearning.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("MVC_Projekt_Elearning.Models.Slider", b =>

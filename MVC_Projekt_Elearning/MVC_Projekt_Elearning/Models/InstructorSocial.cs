@@ -13,6 +13,6 @@ namespace MVC_Projekt_Elearning.Models
         public Social Social { get; set; }
         [ForeignKey(nameof(Social))]
         public int SocialId { get; set; }
-        public string SocialLink { get; set; }
+        public string? SocialLink { get; set; }
     }
 }

@@ -6,7 +6,7 @@
 
 <main id="main" class="main">
     <div class="container mt-5">
-        <h2 class="text-center">Course</h2>
+        <h2 class="text-center">Instructor</h2>
         <div class="create-operations ">
             <a asp-action="Create" class="btn btn-success text-white  mt-2"><i class="fa-solid fa-plus"></i></a>
         </div>
@@ -51,6 +51,9 @@
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             </form>
+                            <a asp-action="Addsocial" asp-route-id="@item.Id" class="btn btn-info text-white small">
+                                <i class="fa-solid fa-user-plus">Add Social</i>
+                            </a>
                         </td>
                     </tr>
                 }

@@ -134,14 +134,36 @@ namespace MVC_Projekt_Elearning.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
         [HttpGet]
         public async Task<IActionResult> Detail(int? id)
         {
-            Course course = await _courseService.GetByIdWithCoursesImagesAsync((int)id);
+            if (id is null) return BadRequest();
+            var existCourse = await _courseService.GetByIdWithCoursesImagesAsync((int)id);
+            if (existCourse is null) return NotFound();
+            var category = await _categoryService.GetByIdAsync(existCourse.CategoryId);
 
+            List<CourseImageVM> images = new();
+            foreach (var item in existCourse.CoursesImages)
+            {
+                images.Add(new CourseImageVM
+                {
+                    Image = item.Name,
+                    IsMain = item.IsMain
 
-            return View(course);
+                });
+            }
+            CourseDetailVM response = new()
+            {
+                Name = existCourse.Name,
+                Rating = existCourse.Rating,
+                Category = category.Name,
+                Price = existCourse.Price,
+                Duration = existCourse.Duration,
+                Instructor=existCourse.Instructor.FullName,
+                Images = images,
+                CreatedDate = existCourse.CreatedDate,
+            };
+            return View(response);
         }
 
         [HttpGet]
@@ -158,6 +180,8 @@ namespace MVC_Projekt_Elearning.Areas.Admin.Controllers
 
 
             ViewBag.categories = await _categoryService.GetAllSelectedAsync();
+            ViewBag.instructors = await _instructorService.GetAllSelectedAsync();
+
 
             List<CourseImageVM> images = new();
 
@@ -178,6 +202,7 @@ namespace MVC_Projekt_Elearning.Areas.Admin.Controllers
                 Rating = existCourse.Rating,
                 Price = existCourse.Price.ToString().Replace(",", "."),
                 Images = images,
+                InstructorId=existCourse.InstructorId,
                 CategoryId = existCourse.CategoryId,
             };
 
@@ -263,6 +288,7 @@ namespace MVC_Projekt_Elearning.Areas.Admin.Controllers
             course.Name = request.Name;
             course.Duration = (int)request.Duration;
             course.Duration = (int)request.Rating;
+            course.InstructorId = request.InstructorId;
             course.CategoryId = request.CategoryId;
             course.Price = decimal.Parse(request.Price);
             

@@ -60,40 +60,7 @@ namespace MVC_Projekt_Elearning.Areas.Admin.Controllers
 
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null) return BadRequest();
-            var social = await _socialService.GetByIdAsync((int)id);
-            if (social == null) return NotFound();
-            
-            return View(new Social { Name = social.Name });
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, Social request)
-        {
-            if (id == null) return BadRequest();
-            var social = await _socialService.GetByIdAsync((int)id);
-            if (social == null) return NotFound();
-
-
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-
-
-            if (request.Name is not null)
-            {
-                social.Name = request.Name;
-            }
-
-
-            await _socialService.EditAsync();
-            return RedirectToAction(nameof(Index));
-        }
+       
 
     }
 }

@@ -60,7 +60,7 @@ namespace MVC_Projekt_Elearning.Services
 
         public async Task<Course> GetByIdWithCoursesImagesAsync(int id)
         {
-            return await _context.Courses.Include(m => m.CoursesImages).FirstOrDefaultAsync(m => m.Id == id);
+            return await _context.Courses.Include(m => m.CoursesImages).Include(m=>m.Instructor).FirstOrDefaultAsync(m => m.Id == id);
         }
 
         public async Task<int> GetCountAsync()
@@ -101,7 +101,7 @@ namespace MVC_Projekt_Elearning.Services
 
         public async Task<bool> ExistExceptByIdAsync(int id, string name)
         {
-            return await _context.Categories.AnyAsync(m => m.Name.ToLower() == name.ToLower() && m.Id != id);
+            return await _context.Courses.AnyAsync(m => m.Name.ToLower().Trim() == name.ToLower().Trim() && m.Id != id);
         }
     }
 }

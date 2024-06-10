@@ -40,7 +40,7 @@ namespace MVC_Projekt_Elearning.Services
 
         public async Task<bool> ExistExceptByIdAsync(int id, string email)
         {
-            return await _context.Instructors.AnyAsync(m => m.Email == email && m.Id != id);
+            return await _context.Instructors.AnyAsync(m => m.Email.ToLower().Trim() == email.ToLower().Trim() && m.Id != id);
         }
 
         public async Task<IEnumerable<Instructor>> GetAllAsync()
