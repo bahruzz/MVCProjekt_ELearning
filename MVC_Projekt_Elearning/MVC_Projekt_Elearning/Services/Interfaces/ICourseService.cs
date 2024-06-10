@@ -18,7 +18,7 @@ namespace MVC_Projekt_Elearning.Services.Interfaces
         Task<Course> GetByIdWithCoursesImagesAsync(int id);
         Task<CourseImage> GetCourseImageByIdAsync(int id);
         Task ImageDeleteAsync(CourseImage image);
-
+        Task<bool> ExistExceptByIdAsync(int id, string name);
 
     }
 }

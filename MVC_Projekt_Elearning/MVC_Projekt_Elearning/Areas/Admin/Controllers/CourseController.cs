@@ -144,6 +144,133 @@ namespace MVC_Projekt_Elearning.Areas.Admin.Controllers
             return View(course);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+
+
+            if (id is null) return BadRequest();
+
+            var existCourse = await _courseService.GetByIdWithCoursesImagesAsync((int)id);
+
+            if (existCourse is null) return NotFound();
+
+
+
+            ViewBag.categories = await _categoryService.GetAllSelectedAsync();
+
+            List<CourseImageVM> images = new();
+
+            foreach (var item in existCourse.CoursesImages)
+            {
+                images.Add(new CourseImageVM
+                {
+                    Id = item.Id,
+                    Image = item.Name,
+                    IsMain = item.IsMain
+                });
+            }
+
+            CourseEditVM response = new()
+            {
+                Name = existCourse.Name,
+                Duration = existCourse.Duration,
+                Rating = existCourse.Rating,
+                Price = existCourse.Price.ToString().Replace(",", "."),
+                Images = images,
+                CategoryId = existCourse.CategoryId,
+            };
+
+
+
+
+
+            return View(response);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, CourseEditVM request)
+        {
+            if (id == null) return BadRequest();
+            var course = await _courseService.GetByIdWithCoursesImagesAsync((int)id);
+            if (course == null) return NotFound();
+
+            List<CourseImageVM> images = new();
+
+            foreach (var item in course.CoursesImages)
+            {
+                images.Add(new CourseImageVM
+                {
+                    Id = item.Id,
+                    Image = item.Name,
+                    IsMain = item.IsMain
+                });
+            }
+            request.Images = images;
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.categories = await _categoryService.GetAllSelectedAsync();
+              
+                return View(request);
+
+            }
+
+            if (await _courseService.ExistExceptByIdAsync((int)id, request.Name))
+            {
+                ModelState.AddModelError("Name", "This name already exist");
+                
+                return View(request);
+
+            }
+
+
+            if (request.NewImages is not null)
+            {
+             
+                foreach (var item in request.NewImages)
+                {
+                    if (!item.CheckFileType("image/"))
+                    {
+                        ModelState.AddModelError("NewImages", "Input can accept only image format");
+                        return View(request);
+
+                    }
+                    if (!item.CheckFileSize(500))
+                    {
+                        ModelState.AddModelError("NewImages", "Image size must be max 500 KB ");
+                        return View(request);
+                    }
+
+
+                }
+                foreach (var item in request.NewImages)
+                {
+                    string oldPath = _env.GenerateFilePath("img", item.Name);
+                    oldPath.DeleteFileFromLocal();
+                    string fileName = Guid.NewGuid().ToString() + "-" + item.FileName;
+                    string newPath = _env.GenerateFilePath("img", fileName);
+
+                    await item.SaveFileToLocalAsync(newPath);
+
+                    course.CoursesImages.Add(new CourseImage { Name = fileName });
+
+                }
+
+            }
+            course.Name = request.Name;
+            course.Duration = (int)request.Duration;
+            course.Duration = (int)request.Rating;
+            course.CategoryId = request.CategoryId;
+            course.Price = decimal.Parse(request.Price);
+            
+
+            await _courseService.EditAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
 
     }
 

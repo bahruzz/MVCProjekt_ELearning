@@ -1,7 +1,9 @@
 ﻿using MVC_Projekt_Elearning.Models;
 using MVC_Projekt_Elearning.ViewModels.Abouts;
 using MVC_Projekt_Elearning.ViewModels.Categories;
+using MVC_Projekt_Elearning.ViewModels.Courses;
 using MVC_Projekt_Elearning.ViewModels.Informations;
+using MVC_Projekt_Elearning.ViewModels.Instructors;
 using MVC_Projekt_Elearning.ViewModels.Sliders;
 
 namespace MVC_Projekt_Elearning.ViewModels
@@ -14,5 +16,7 @@ namespace MVC_Projekt_Elearning.ViewModels
         public CategoryCourseVM CategoryFirst { get; set; }
         public CategoryCourseVM CategoryLast { get; set; }
         public IEnumerable<CategoryCourseVM> Categories { get; set; }
+        public IEnumerable<Course> Courses { get; set; }
+        public IEnumerable<Instructor> Instructors { get; set; }
     }
 }

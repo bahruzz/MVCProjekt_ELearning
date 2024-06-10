@@ -98,5 +98,10 @@ namespace MVC_Projekt_Elearning.Services
         {
             return await _context.Courses.Include(m => m.CoursesImages).ToListAsync();
         }
+
+        public async Task<bool> ExistExceptByIdAsync(int id, string name)
+        {
+            return await _context.Categories.AnyAsync(m => m.Name.ToLower() == name.ToLower() && m.Id != id);
+        }
     }
 }

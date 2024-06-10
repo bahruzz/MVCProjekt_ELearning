@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC_Projekt_Elearning.Services;
 using MVC_Projekt_Elearning.Services.Interfaces;
 using MVC_Projekt_Elearning.ViewModels;
 using System.Diagnostics;
@@ -11,13 +12,22 @@ namespace MVC_Projekt_Elearning.Controllers
         private readonly IInformationService _informationService;
         private readonly IAboutService _aboutService;
         private readonly ICategoryService _categoryService;
+        private readonly ICourseService _courseService;
+        private readonly IInstructorService _instructorService;
 
-        public HomeController(ISliderService sliderservice,IInformationService informationService, IAboutService aboutService,ICategoryService categoryService)
+        public HomeController(ISliderService sliderservice,
+            IInformationService informationService, 
+            IAboutService aboutService,
+            ICategoryService categoryService,
+            ICourseService courseService,
+            IInstructorService instructorService)
         {
             _sliderService = sliderservice;
             _informationService = informationService;
             _aboutService = aboutService;
             _categoryService = categoryService;
+            _courseService = courseService;
+            _instructorService = instructorService;
         }
 
 
@@ -33,6 +43,8 @@ namespace MVC_Projekt_Elearning.Controllers
                 CategoryFirst = a.FirstOrDefault(),
                 CategoryLast = a.LastOrDefault(),
                 Categories = a.Skip(1).Take(2),
+                Courses = await _courseService.GetAllAsync(),
+                Instructors = await _instructorService.GetAllAsync(),
 
             };
             return View(model);

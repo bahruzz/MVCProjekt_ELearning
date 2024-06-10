@@ -14,9 +14,8 @@
             <thead>
                 <tr>
 
-                    <th scope="col" style="background-color:white;color:black">Name</th>
-                    <th scope="col" style="background-color:white;color:black">Rating</th>
-                    <th scope="col" style="background-color:white;color:black">Duration</th>
+                    <th scope="col" style="background-color:white;color:black">Name</th>                 
+                    <th scope="col" style="background-color:white;color:black">Instructor</th>
                     <th scope="col" style="background-color:white;color:black">Price</th>
                     <th scope="col" style="background-color:white;color:black">Category</th>
                     <th scope="col" style="background-color:white;color:black">Operations</th>
@@ -27,17 +26,13 @@
                 @foreach (var item in Model.Datas)
                 {
                     <tr class="category-data">
-                        <td class="py-1">
-                            <img style="witdh:50px !important; height:40px;" src="~/img/@item.MainImage" />
-                        </td>
+                        
                         <td>
                             @item.Name
                         </td>
+                     
                         <td>
-                            @item.Rating
-                        </td>
-                        <td>
-                            @item.Duration
+                            @item.InstructorName
                         </td>
                         <td>
                             @item.Price
